@@ -5,26 +5,27 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jefernan <jefernan@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/04/12 15:57:33 by jefernan          #+#    #+#              #
-#    Updated: 2023/04/29 15:45:26 by jefernan         ###   ########.fr        #
+#    Created: 2023/04/12 18:11:23 by jefernan          #+#    #+#              #
+#    Updated: 2023/04/29 15:47:54 by jefernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= megaphone
+NAME	= phonebook
 CC		= c++
 FLAGS	= -Wall -Wextra -Werror -std=c++98
 RM		= rm -rf
-SRC		= megaphone.cpp
+HEADER	= contact.hpp phonebook.hpp
+SRC		= main.cpp phonebook.cpp contact.cpp utils.cpp
 OBJ		= $(SRC:.cpp=.o)
 
 all:	$(NAME)
 
-.cpp.o:
+.cpp.o: $(SRC)/%.cpp $(HEADER)
 		@$(CC) $(FLAGS) -c $< -o $@
-		@echo "\e[0;35m Successfully compiled! \e[0m"
 
-$(NAME): $(OBJ)
-		@$(CC) $(OBJ) $(FLAGS) -o $(NAME)
+$(NAME): $(OBJ) $(HEADER)
+		@$(CC) $(FLAGS) $(OBJ) -o $(NAME)
+		@echo "\e[0;35m Successfully compiled! \e[0m"
 
 clean:
 		@$(RM) $(OBJ)

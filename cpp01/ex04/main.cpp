@@ -1,40 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jefernan <jefernan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/12 16:11:30 by jefernan          #+#    #+#             */
-/*   Updated: 2023/04/29 15:45:22 by jefernan         ###   ########.fr       */
+/*   Created: 2023/04/26 00:11:11 by jefernan          #+#    #+#             */
+/*   Updated: 2023/04/29 15:59:27 by jefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Sed.hpp"
 
 int	main(int argc, char *argv[])
 {
-	int	i;
-	int	j;
+	if (argc != 4){
+		std::cout << "Invalid number of arguments. Use: ./sed <filename> <s1> <s2>" << std::endl;
+		return (1);
+	}
 
-	i = 1;
-	if (argc == 1)
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
-		return (0);
-	}
-	while (i < argc)
-	{
-		j = 0;
-		while (argv[i][j])
-		{
-			if (std::islower(argv[i][j]))
-				argv[i][j] = std::toupper(argv[i][j]);
-			j++;
-		}
-		std::cout << argv[i];
-		i++;
-	}
-	std::cout << std::endl;
+	Sed sed = Sed(argv[1], argv[2], argv[3]);
+	sed.openFile();
 	return (0);
 }

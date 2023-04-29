@@ -1,40 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jefernan <jefernan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/12 16:11:30 by jefernan          #+#    #+#             */
-/*   Updated: 2023/04/29 15:45:22 by jefernan         ###   ########.fr       */
+/*   Created: 2023/04/24 15:56:47 by jefernan          #+#    #+#             */
+/*   Updated: 2023/04/29 15:57:11 by jefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Zombie.hpp"
 
-int	main(int argc, char *argv[])
+int	main(void)
 {
-	int	i;
-	int	j;
+	Zombie*	zombie;
+	int		num = 5;
 
-	i = 1;
-	if (argc == 1)
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
-		return (0);
+	zombie = zombieHorde(num, "Bob");
+	for (int i = 0; i < num; i++){
+		zombie[i].announce();
 	}
-	while (i < argc)
-	{
-		j = 0;
-		while (argv[i][j])
-		{
-			if (std::islower(argv[i][j]))
-				argv[i][j] = std::toupper(argv[i][j]);
-			j++;
-		}
-		std::cout << argv[i];
-		i++;
-	}
-	std::cout << std::endl;
+	delete[] zombie;
 	return (0);
 }

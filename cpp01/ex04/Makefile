@@ -5,33 +5,40 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jefernan <jefernan@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/04/12 15:57:33 by jefernan          #+#    #+#              #
-#    Updated: 2023/04/29 15:45:26 by jefernan         ###   ########.fr        #
+#    Created: 2023/04/26 00:10:14 by jefernan          #+#    #+#              #
+#    Updated: 2023/04/29 16:10:18 by jefernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= megaphone
+NAME	= sed
 CC		= c++
 FLAGS	= -Wall -Wextra -Werror -std=c++98
 RM		= rm -rf
-SRC		= megaphone.cpp
-OBJ		= $(SRC:.cpp=.o)
+
+SRC		= main.cpp Sed.cpp
+HEADER	= Sed.hpp
+
+OBJ_DIR	= ./obj
+OBJ		= $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 
 all:	$(NAME)
 
-.cpp.o:
-		@$(CC) $(FLAGS) -c $< -o $@
+$(NAME): $(OBJ_DIR)  $(OBJ)
+		@$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 		@echo "\e[0;35m Successfully compiled! \e[0m"
 
-$(NAME): $(OBJ)
-		@$(CC) $(OBJ) $(FLAGS) -o $(NAME)
+$(OBJ_DIR)/%.o:	%.cpp $(HEADER)
+	@$(CC) $(CFLAGS) -c $< -o $@
+
+$(OBJ_DIR):
+	@mkdir -p $(OBJ_DIR)
 
 clean:
-		@$(RM) $(OBJ)
+		@$(RM) $(OBJ_DIR)
 		@echo "\e[0;36m Objects removed! \e[0m"
 
 fclean: clean
-		@$(RM) $(NAME)
+		@$(RM) $(NAME) *.replace
 		@echo "\e[0;36m Program has been cleaned! \e[0m"
 
 re: 	fclean all

@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jefernan <jefernan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/12 16:11:30 by jefernan          #+#    #+#             */
-/*   Updated: 2023/04/29 15:45:22 by jefernan         ###   ########.fr       */
+/*   Created: 2023/04/24 17:08:59 by jefernan          #+#    #+#             */
+/*   Updated: 2023/04/29 15:59:15 by jefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
+
+#include <string>
 #include <iostream>
 
-int	main(int argc, char *argv[])
-{
-	int	i;
-	int	j;
+class Weapon {
 
-	i = 1;
-	if (argc == 1)
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
-		return (0);
-	}
-	while (i < argc)
-	{
-		j = 0;
-		while (argv[i][j])
-		{
-			if (std::islower(argv[i][j]))
-				argv[i][j] = std::toupper(argv[i][j]);
-			j++;
-		}
-		std::cout << argv[i];
-		i++;
-	}
-	std::cout << std::endl;
-	return (0);
-}
+private:
+	std::string	_type;
+
+public:
+	Weapon(std::string type);
+	~Weapon( void );
+	std::string	getType(void);
+	void		setType(std::string type);
+};
+
+#endif

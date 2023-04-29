@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jefernan <jefernan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/12 16:11:30 by jefernan          #+#    #+#             */
-/*   Updated: 2023/04/29 15:45:22 by jefernan         ###   ########.fr       */
+/*   Created: 2023/04/24 01:05:04 by jefernan          #+#    #+#             */
+/*   Updated: 2023/04/29 15:56:16 by jefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Zombie.hpp"
 
-int	main(int argc, char *argv[])
+int	main(void)
 {
-	int	i;
-	int	j;
+	Zombie	bob = Zombie("Bob");
+	Zombie*	ted = newZombie("Ted");
 
-	i = 1;
-	if (argc == 1)
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
-		return (0);
-	}
-	while (i < argc)
-	{
-		j = 0;
-		while (argv[i][j])
-		{
-			if (std::islower(argv[i][j]))
-				argv[i][j] = std::toupper(argv[i][j]);
-			j++;
-		}
-		std::cout << argv[i];
-		i++;
-	}
-	std::cout << std::endl;
+	std::cout << CYAN << std::endl <<"Zombie on stack:" << RESET << std::endl;
+	bob.announce();
+
+	std::cout << BGRN << std::endl << "Zombie on heap:" << RESET << std::endl;
+	ted->announce();
+
+	std::cout <<  BBLU << std::endl << "Function randomChump" << RESET << std::endl;
+	randomChump("Chris");
+
+	delete(ted);
 	return (0);
 }

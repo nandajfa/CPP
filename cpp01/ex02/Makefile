@@ -5,16 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jefernan <jefernan@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/04/12 15:57:33 by jefernan          #+#    #+#              #
-#    Updated: 2023/04/29 15:45:26 by jefernan         ###   ########.fr        #
+#    Created: 2023/04/24 01:26:46 by jefernan          #+#    #+#              #
+#    Updated: 2023/04/29 15:58:07 by jefernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= megaphone
+
+NAME	= brain
 CC		= c++
 FLAGS	= -Wall -Wextra -Werror -std=c++98
 RM		= rm -rf
-SRC		= megaphone.cpp
+SRC		= main.cpp
 OBJ		= $(SRC:.cpp=.o)
 
 all:	$(NAME)

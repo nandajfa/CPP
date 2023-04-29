@@ -1,40 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   utils.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jefernan <jefernan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/12 16:11:30 by jefernan          #+#    #+#             */
-/*   Updated: 2023/04/29 15:45:22 by jefernan         ###   ########.fr       */
+/*   Created: 2023/04/23 00:44:54 by jefernan          #+#    #+#             */
+/*   Updated: 2023/04/29 15:47:16 by jefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "phonebook.hpp"
 
-int	main(int argc, char *argv[])
+std::string	PhoneBook::_truncateStr(std::string contact)
 {
-	int	i;
-	int	j;
-
-	i = 1;
-	if (argc == 1)
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
-		return (0);
+	if (contact.length() > 9){
+		contact = contact.substr(0, 9) + ".";
 	}
-	while (i < argc)
+	return (contact);
+}
+
+bool	PhoneBook::_validPhone(std::string phone)
+{
+	int i = 0;
+
+	while (phone[i])
 	{
-		j = 0;
-		while (argv[i][j])
+		if (!std::isdigit(phone[i]))
 		{
-			if (std::islower(argv[i][j]))
-				argv[i][j] = std::toupper(argv[i][j]);
-			j++;
+			std::cout << RED << "Phone number must only contain numbers" << RESET << std::endl;
+			return (false);
 		}
-		std::cout << argv[i];
 		i++;
 	}
-	std::cout << std::endl;
-	return (0);
+	return (true);
 }

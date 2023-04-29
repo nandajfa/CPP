@@ -1,40 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jefernan <jefernan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/12 16:11:30 by jefernan          #+#    #+#             */
-/*   Updated: 2023/04/29 15:45:22 by jefernan         ###   ########.fr       */
+/*   Created: 2023/04/29 22:08:42 by jefernan          #+#    #+#             */
+/*   Updated: 2023/04/29 19:29:22 by jefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef HARL_HPP
+# define HARL_HPP
+
 #include <iostream>
 
-int	main(int argc, char *argv[])
-{
-	int	i;
-	int	j;
+#define BBLU "\e[1;34m"
+#define BRED "\e[1;31m"
+#define BCYN "\e[1;36m"
+#define BGRN "\e[1;32m"
+#define BMAG "\e[1;35m"
+#define BWHT "\e[1;37m"
+#define RESET "\e[0m"
 
-	i = 1;
-	if (argc == 1)
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
-		return (0);
-	}
-	while (i < argc)
-	{
-		j = 0;
-		while (argv[i][j])
-		{
-			if (std::islower(argv[i][j]))
-				argv[i][j] = std::toupper(argv[i][j]);
-			j++;
-		}
-		std::cout << argv[i];
-		i++;
-	}
-	std::cout << std::endl;
-	return (0);
-}
+class Harl {
+	public:
+	Harl( void );
+	~Harl( void );
+	void complain( std::string level );
+
+	private:
+	void _debug( void );
+	void _info( void );
+	void _warning( void );
+	void _error( void );
+};
+
+#endif

@@ -1,40 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jefernan <jefernan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/12 16:11:30 by jefernan          #+#    #+#             */
-/*   Updated: 2023/04/29 15:45:22 by jefernan         ###   ########.fr       */
+/*   Created: 2023/04/24 00:55:10 by jefernan          #+#    #+#             */
+/*   Updated: 2023/04/29 15:56:59 by jefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
+
+#include <string>
 #include <iostream>
 
-int	main(int argc, char *argv[])
-{
-	int	i;
-	int	j;
+#define RESET "\033[0m"
+#define CYAN "\033[36;1m"
+#define BBLU "\e[1;34m"
+#define RED "\033[31m"
+#define BGRN "\e[1;32m"
 
-	i = 1;
-	if (argc == 1)
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
-		return (0);
-	}
-	while (i < argc)
-	{
-		j = 0;
-		while (argv[i][j])
-		{
-			if (std::islower(argv[i][j]))
-				argv[i][j] = std::toupper(argv[i][j]);
-			j++;
-		}
-		std::cout << argv[i];
-		i++;
-	}
-	std::cout << std::endl;
-	return (0);
-}
+class Zombie {
+private:
+	std::string	_name;
+public:
+	Zombie(std::string name);
+	~Zombie( void );
+	void announce( void );
+};
+
+Zombie* newZombie( std::string name );
+void randomChump( std::string name );
+
+#endif

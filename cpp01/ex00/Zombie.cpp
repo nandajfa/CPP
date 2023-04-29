@@ -1,40 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jefernan <jefernan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/12 16:11:30 by jefernan          #+#    #+#             */
-/*   Updated: 2023/04/29 15:45:22 by jefernan         ###   ########.fr       */
+/*   Created: 2023/04/24 01:01:04 by jefernan          #+#    #+#             */
+/*   Updated: 2023/04/29 15:56:49 by jefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Zombie.hpp"
 
-int	main(int argc, char *argv[])
+Zombie::Zombie(std::string name) : _name(name) {
+	return ;
+}
+Zombie::~Zombie(void) {
+	std::cout << RED << "Zombie " << this->_name << " died" << RESET << std::endl;
+	return ;
+}
+
+void Zombie::announce( void )
 {
-	int	i;
-	int	j;
-
-	i = 1;
-	if (argc == 1)
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
-		return (0);
-	}
-	while (i < argc)
-	{
-		j = 0;
-		while (argv[i][j])
-		{
-			if (std::islower(argv[i][j]))
-				argv[i][j] = std::toupper(argv[i][j]);
-			j++;
-		}
-		std::cout << argv[i];
-		i++;
-	}
-	std::cout << std::endl;
-	return (0);
+	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
