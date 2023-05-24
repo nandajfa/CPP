@@ -139,9 +139,9 @@ int main()
 
 ### Resources
 
-[sstream](https://cplusplus.com/reference/sstream/)
-[fstream](https://cplusplus.com/reference/fstream/)
-[iostream](https://cplusplus.com/reference/iostream/)
-[Stack vs Heap Memory in C++](https://www.youtube.com/watch?v=wJ1L2nSIV1s)
-[Stack and heap](https://www.learncpp.com/cpp-tutorial/the-stack-and-the-heap/)
-[const Keyword in C++](https://www.studytonight.com/cpp/const-keyword.php#)
+[sstream](https://cplusplus.com/reference/sstream/)<br>
+[fstream](https://cplusplus.com/reference/fstream/)<br>
+[iostream](https://cplusplus.com/reference/iostream/)<br>
+[Stack vs Heap Memory in C++](https://www.youtube.com/watch?v=wJ1L2nSIV1s)<br>
+[Stack and heap](https://www.learncpp.com/cpp-tutorial/the-stack-and-the-heap/)<br>
+[const Keyword in C++](https://www.studytonight.com/cpp/const-keyword.php#)<br>
