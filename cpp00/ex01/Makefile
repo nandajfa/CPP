@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jefernan <jefernan@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: jefernan <jefernan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/12 18:11:23 by jefernan          #+#    #+#              #
-#    Updated: 2023/04/29 15:47:54 by jefernan         ###   ########.fr        #
+#    Updated: 2023/04/29 20:47:58 by jefernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ clean:
 		@$(RM) $(OBJ)
 		@echo "\e[0;36m Objects removed! \e[0m"
 
-fclean: clean
+fclean: clean	
 		@$(RM) $(NAME)
 		@echo "\e[0;36m Program has been cleaned! \e[0m"
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jefernan <jefernan@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: jefernan <jefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 17:08:50 by jefernan          #+#    #+#             */
-/*   Updated: 2023/04/29 15:47:30 by jefernan         ###   ########.fr       */
+/*   Updated: 2023/05/23 21:20:26 by jefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <iostream> /* std::cout */
 #include <iomanip> /* std::setw */
 #include <stdlib.h> /*exit*/
+#include <sstream> 
 
 /* ANSI COLOR CODES */
 #define RESET "\033[0m"
@@ -36,16 +37,19 @@ private:
 	int		_index;
 
 	void		_printTable(int i);
+	void		_addContact(std::string info[5]);
+	void		_getIndex();
 	bool		_validPhone(std::string phone);
+	bool 		_verifySpaces(const std::string& str);
 	std::string	_truncateStr(std::string contact);
+	std::string	_getInfo(std::string info);
 public:
 	PhoneBook( void ); /*constructor*/
 	~PhoneBook( void ); /*destructor*/
-
-	void		getInfo(void);
-	void		addContact(std::string info[5]);
+	
+	void		add(void);
 	void		searchContact();
-	void		printContact(void);
+	void		printContact(int index);
 };
 
 #endif

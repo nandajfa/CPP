@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jefernan <jefernan@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: jefernan <jefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 14:01:25 by jefernan          #+#    #+#             */
-/*   Updated: 2023/04/29 15:48:03 by jefernan         ###   ########.fr       */
+/*   Updated: 2023/05/23 01:22:25 by jefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ int	main(void)
 		std::cout << BOLD_WHITE << "Please, enter one of the options:" << RESET << std::endl;
 		std::cout << BOLD_WHITE << "ADD, SEARCH or EXIT" << RESET << std::endl;
 		std::getline(std::cin, input);
-		if (input == "ADD")
-			phonebook.getInfo();
-		else if (input == "SEARCH")
+		if (input == "ADD" || input == "add")
+			phonebook.add();
+		else if (input == "SEARCH" || input == "search")
 			phonebook.searchContact();
-		else if (input == "EXIT")
+		else if (input == "EXIT" || input == "exit" || std::cin.eof())
 			exit(0);
 		else
 			std::cout << RED << "Invalid command." << RESET << std::endl;
