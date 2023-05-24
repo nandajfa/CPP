@@ -75,9 +75,9 @@ Fixed point is a simple yet very powerful way to represent fractional numbers in
 
 ### Resources
 
-[floating point types](https://www.youtube.com/watch?v=CXuW85ZNf9E)
-[Operator overload](https://www.youtube.com/watch?v=_jTEXu_EqaE&t=31s)
-[Using Floating Point ](https://www.cprogramming.com/tutorial/floating_point/understanding_floating_point.html)
-[Floating point number representation](https://www.cprogramming.com/tutorial/floating_point/understanding_floating_point_representation.html)
-[Printing floating point numbers](https://www.cprogramming.com/tutorial/floating_point/understanding_floating_point_printing.html)
-[Introduction to Fixed Point](https://inst.eecs.berkeley.edu//~cs61c/sp06/handout/fixedpt.html)
+[floating point types](https://www.youtube.com/watch?v=CXuW85ZNf9E)<br>
+[Operator overload](https://www.youtube.com/watch?v=_jTEXu_EqaE&t=31s)<br>
+[Using Floating Point ](https://www.cprogramming.com/tutorial/floating_point/understanding_floating_point.html) <br>
+[Floating point number representation](https://www.cprogramming.com/tutorial/floating_point/understanding_floating_point_representation.html) <br>
+[Printing floating point numbers](https://www.cprogramming.com/tutorial/floating_point/understanding_floating_point_printing.html) <br>
+[Introduction to Fixed Point](https://inst.eecs.berkeley.edu//~cs61c/sp06/handout/fixedpt.html) <br>
