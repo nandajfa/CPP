@@ -4,7 +4,7 @@
 - One class is derived from another by adding extra properties, by specialization and making the new class a specialized version of the more general class.
 
 ```
-// base class
+# base class
 class Animal {
 private:
 	int _numberOfLegs;
@@ -21,8 +21,8 @@ public:
 	void walk(int distance);
 };
 
-// It means that Cat is an animal
-// public inheritance
+# It means that Cat is an animal
+# public inheritance
 class Cat : public Animal {
 
 public:
@@ -58,7 +58,7 @@ public:
 ```
 class CerealPack : public Carton, public Contents
 {
-	// details of the class...
+	# details of the class...
 };
 ```
 
@@ -70,4 +70,4 @@ class CerealPack : public Carton, public Contents
 
 - The solution to this problem is ‘virtual’ keyword. We make the classes ‘Faculty’ and ‘Student’ as virtual base classes to avoid two copies of ‘Person’ in ‘TA’ class.
 
-* How does virtual solve the diamond problem? Virtual inheritance means that there will be only 1 instance of the base A class not 2.[source](https://stackoverflow.com/questions/2659116/how-does-virtual-inheritance-solve-the-diamond-multiple-inheritance-ambiguit)
+* How does virtual solve the diamond problem? Virtual inheritance means that there will be only 1 instance of the base A class not 2. [source](https://stackoverflow.com/questions/2659116/how-does-virtual-inheritance-solve-the-diamond-multiple-inheritance-ambiguit)
