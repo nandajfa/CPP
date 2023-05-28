@@ -4,7 +4,7 @@
 - One class is derived from another by adding extra properties, by specialization and making the new class a specialized version of the more general class.
 
 ```
-# base class
+// base class
 class Animal {
 private:
 	int _numberOfLegs;
@@ -21,8 +21,8 @@ public:
 	void walk(int distance);
 };
 
-# It means that Cat is an animal
-# public inheritance
+// It means that Cat is an animal
+// public inheritance
 class Cat : public Animal {
 
 public:
@@ -58,7 +58,7 @@ public:
 ```
 class CerealPack : public Carton, public Contents
 {
-	# details of the class...
+	// details of the class...
 };
 ```
 
