@@ -7,7 +7,7 @@ You can have two libraries that contain the same name for a given method. With n
 
 - Frequently used namespace -> std:: -> finds all standard C++ libraries.
 
-```
+```c++
 int	gl_var = 1;
 int	f(void) { return 2; };
 
@@ -51,7 +51,7 @@ int	main(void){
 
 * CIN -> COUT = standard input and output
 
-```
+```c++
 #include <iostream>
 
 int main(void)
@@ -70,7 +70,7 @@ int main(void)
 
 - Are structures that allow defining customized data types, with attributes and methods that can be accessed by external code. For example, you can create a "Person" class with attributes such as "name" and "age", and methods such as "setName" and "getAge".
 
-```
+```c++
 #ifndef SAMPLE_CLASS_H
 # define SAMPLE_CLASS_H
 
@@ -104,7 +104,7 @@ int	main(void)
 
 - Member attribute is a variable you have in your class, and you may use from an instance.
 
-```
+```c++
 class MyClass {
 public:
     std::string getValue(std::string fieldName) const; //method - function
@@ -121,7 +121,7 @@ private:
 
 - One member function only has one copy and is used by multiple objects, how are the proper data members accessed and updated? The compiler supplies an implicit pointer along with the names of the functions as 'this'
 
-```
+```c++
 #include <iostream>
 #include "Sample.class.hpp"
 
@@ -143,7 +143,7 @@ std::cout << "Constructor called" << std::endl;
 
 - Are initialization lists that allow defining initial values for the attributes of a class more efficiently. For example, in the "Person" class, you can use an initialization list to set the initial value of the "age" attribute in the class constructor.
 
-```
+```c++
 class Pessoa {
 public:
     Pessoa(std::string nome, int idade)
@@ -172,7 +172,7 @@ private:
 
 - The more your code is `const` and `read only`, the more your code will be robust in the long term.
 
-```
+```c++
 public:
 
 	float const pi;

@@ -3,7 +3,7 @@
 - new() and delete() use malloc() and free() in reality, but they also call the constructor and destructor in an appropriate way.
 - new() does not take parameters. So need to think of ways to initialise values.
 
-```
+```c++
 int main()
 {
 	Student		bob = Student("bfubar");
@@ -78,7 +78,7 @@ Reference
 
 * Pointers and references are essentially the same thing, regarding how the computer will do with them. Pointers are more flexible than references. If something should always exist and never change, use a references. But if it should not always exist and can change, use a pointer.
 
-```
+```c++
 int	main()
 {
 	int		numberOfBalls = 42;
@@ -113,7 +113,7 @@ int	main()
 - An ofstream object represents a file output stream that you can only write to it.
 - An fstream is a file stream that you can read or write.
 
-```
+```c++
 #include <iostream>
 #include <fstream>
 

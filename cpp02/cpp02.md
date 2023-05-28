@@ -2,7 +2,7 @@
 
 - Function overloading is a C++ principle, which allows you to define many functions having the same name, but accepting different parameters.
 
-```
+```c++
 class Sample {
 public:
 	Sample();
@@ -39,7 +39,7 @@ Bitwise operators
 
 Examples:
 
-```
+```c++
 //Write:
 int main()
 {
