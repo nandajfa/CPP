@@ -3,7 +3,7 @@
 - Inheritance is the means by which you can create new classes by reusing and expanding on existing class definitions.
 - One class is derived from another by adding extra properties, by specialization and making the new class a specialized version of the more general class.
 
-```
+```c++
 // base class
 class Animal {
 private:
@@ -55,7 +55,7 @@ public:
 - A derived class can have as many direct base classes as an application requires. This is referred to as multiple inheritance as opposed to single inheritance, in which a single base class is used. Multiple inheritance is used much less frequently than single inheritance and in best avoided as much as possible.
   <br>
 
-```
+```c++
 class CerealPack : public Carton, public Contents
 {
 	// details of the class...
