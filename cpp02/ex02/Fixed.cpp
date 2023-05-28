@@ -6,7 +6,7 @@
 /*   By: jefernan <jefernan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 21:52:57 by jefernan          #+#    #+#             */
-/*   Updated: 2023/05/24 16:14:06 by jefernan         ###   ########.fr       */
+/*   Updated: 2023/05/24 17:30:56 by jefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ Fixed::Fixed(float const f) {
 	this->_value = (int) roundf(f * (1 << this->_fractionalBits));
 }
 
-Fixed::Fixed(Fixed const & copy){
-	*this = copy;
+Fixed::Fixed(Fixed const & src){
+	*this = src;
 }
 
 //Destructor
