@@ -21,8 +21,6 @@
 
 ### Index
 
-You're sections headers will be used to reference location of destination.
-
 - [Object Oriented Programming Intro](#opp-intro)
 - [Modules](#modules)
 - [References 📌](#references)
