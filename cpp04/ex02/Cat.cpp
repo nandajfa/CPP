@@ -40,6 +40,10 @@ Cat& Cat::operator=(Cat const & src){
 	return (*this);
 }
 
+/**
+ * @brief Make a sound
+ * @details This function prints a message indicating that the cat meows.
+ */
 void	Cat::makeSound(void) const{
 	std::cout << YEL << "The " << this->_type << " miaawws"<< RESET << std::endl;
 }

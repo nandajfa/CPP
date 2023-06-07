@@ -6,7 +6,7 @@
 #    By: jefernan <jefernan@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 21:51:43 by jefernan          #+#    #+#              #
-#    Updated: 2023/05/24 15:00:55 by jefernan         ###   ########.fr        #
+#    Updated: 2023/06/07 09:15:11 by jefernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ $(NAME): $(OBJ_DIR)  $(OBJ)
 		@echo "\e[0;35m Successfully compiled! \e[0m"
 
 $(OBJ_DIR)/%.o:	%.cpp $(HEADER)
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(FLAGS) -c $< -o $@
 
 $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)

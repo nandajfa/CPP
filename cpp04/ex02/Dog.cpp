@@ -40,6 +40,10 @@ Dog& Dog::operator=(Dog const & src){
 	return (*this);
 }
 
+/**
+ * @brief Make a sound.
+ * @details This function prints a message indicating that the dog barks.
+ */
 void	Dog::makeSound(void) const{
 	std::cout << BLU << "The " << this->_type << " barks"<< RESET << std::endl;
 }
