@@ -6,7 +6,7 @@
 /*   By: jefernan <jefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 22:42:38 by jefernan          #+#    #+#             */
-/*   Updated: 2023/06/16 01:27:06 by jefernan         ###   ########.fr       */
+/*   Updated: 2023/06/18 00:04:11 by jefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 #include <iostream>
 #include <string>
 #include <stdint.h>
+
+#define CYN "\e[0;36m"
+#define RESET "\e[0m"
 
 struct Data {
 	std::string	name;

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jefernan <jefernan@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: jefernan <jefernan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/29 00:27:30 by jefernan          #+#    #+#              #
-#    Updated: 2023/06/07 09:16:25 by jefernan         ###   ########.fr        #
+#    Updated: 2023/06/07 00:06:04 by jefernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,8 +28,8 @@ $(NAME): $(OBJ_DIR)  $(OBJ)
 		@echo "\e[0;35m Successfully compiled! \e[0m"
 
 $(OBJ_DIR)/%.o:	%.cpp $(HEADER)
-	@$(CC) $(FLAGS) -c $< -o $@
-
+	@$(CC) $(FLAGS) -c $< -o $@ 
+	
 $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)
 

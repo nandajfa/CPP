@@ -6,7 +6,7 @@
 /*   By: jefernan <jefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 23:13:30 by jefernan          #+#    #+#             */
-/*   Updated: 2023/06/05 01:00:12 by jefernan         ###   ########.fr       */
+/*   Updated: 2023/06/20 16:18:48 by jefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,7 +152,7 @@ void	testForm(void){
 
 int	main(void)
 {
-	// testBr();
+	testBr();
 	testForm();
 
 	return (0);

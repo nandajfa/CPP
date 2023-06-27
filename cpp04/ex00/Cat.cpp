@@ -17,10 +17,12 @@ Cat::Cat(void) : Animal() {
 	std::cout << YEL << "Default constructor Cat called." << RESET << std::endl;
 	return;
 }
+
 Cat::Cat(Cat const& copy) : Animal() {
 	std::cout << YEL << "Copy constructor Cat called." << RESET << std::endl;
 	*this = copy;
 }
+
 Cat::~Cat(void){
 	std::cout << YEL << "Destructor Cat called." << RESET << std::endl;
 	return;
@@ -28,7 +30,7 @@ Cat::~Cat(void){
 
 Cat& Cat::operator=(Cat const & src){
 	if (this != &src)
-		this->_type = src.getType();
+		this->setType(src.getType());
 	std::cout << YEL << "Copy assignment Cat operator called." << RESET << std::endl;
 	return (*this);
 }
@@ -36,4 +38,3 @@ Cat& Cat::operator=(Cat const & src){
 void	Cat::makeSound(void) const{
 	std::cout << BLU << "The " << this->_type << " miaawws"<< RESET << std::endl;
 }
-

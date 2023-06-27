@@ -23,27 +23,3 @@ In software development, serialization is often used to save the state of an obj
 There are many different serialization formats and protocols, such as XML, JSON, YAML, Protocol Buffers, and Thrift. These formats and protocols have different characteristics and tradeoffs in terms of performance, human readability, interoperability, and versioning.
 
 A very basic way to serialize data would be to transform a data structure into a string or byte stream format that can be easily stored or transmitted. Here's a simple example of how you might serialize a struct of data into a string:
-
-```c++
-#include <iostream>
-#include <sstream>
-
-struct Person {
-    std::string name;
-    int age;
-    double height;
-};
-
-std::string serialize(const Person& person) {
-    std::ostringstream oss;
-    oss << person.name << "|" << person.age << "|" << person.height;
-    return oss.str();
-}
-
-int main() {
-    Person p = {"Alice", 25, 1.65};
-    std::string serialized = serialize(p);
-    std::cout << "Serialized: " << serialized << std::endl;
-    return 0;
-}
-```

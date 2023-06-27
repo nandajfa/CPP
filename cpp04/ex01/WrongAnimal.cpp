@@ -17,6 +17,10 @@ WrongAnimal::WrongAnimal(void) : _type("WrongAnimal") {
 	return;
 }
 
+WrongAnimal::WrongAnimal(std::string const& type): _type(type) {
+	std::cout << MAG << "Type constructor WrongAnimal called." << RESET << std::endl;
+}
+
 WrongAnimal::WrongAnimal(WrongAnimal const& copy) {
 	std::cout << MAG << "Copy constructor WrongAnimal called." << RESET << std::endl;
 	*this = copy;

@@ -6,14 +6,14 @@
 /*   By: jefernan <jefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 01:03:26 by jefernan          #+#    #+#             */
-/*   Updated: 2023/06/07 01:10:54 by jefernan         ###   ########.fr       */
+/*   Updated: 2023/06/20 15:10:42 by jefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm() :
-	AForm("Presidential Pardon Form", 25, 5), _target("Nome") {
+	AForm("Presidential Pardon Form", 25, 5), _target("None") {
 	std::cout << GRN << "Default constructor Presidential Pardon called." << RESET << std::endl;
 }
 

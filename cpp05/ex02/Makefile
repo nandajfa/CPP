@@ -6,7 +6,7 @@
 #    By: jefernan <jefernan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/02 23:13:33 by jefernan          #+#    #+#              #
-#    Updated: 2023/06/07 02:45:02 by jefernan         ###   ########.fr        #
+#    Updated: 2023/06/20 16:22:37 by jefernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,7 @@ clean:
 		@echo "\e[0;36m Objects removed! \e[0m"
 
 fclean: clean
-		@$(RM) $(NAME)
+		@$(RM) $(NAME) *_shrubbery
 		@echo "\e[0;36m Program has been cleaned! \e[0m"
 
 re: 	fclean all

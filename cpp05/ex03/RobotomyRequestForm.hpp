@@ -6,7 +6,7 @@
 /*   By: jefernan <jefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 01:03:40 by jefernan          #+#    #+#             */
-/*   Updated: 2023/06/07 20:16:11 by jefernan         ###   ########.fr       */
+/*   Updated: 2023/06/20 16:11:46 by jefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class RobotomyRequestForm : public AForm {
 		RobotomyRequestForm(void);
 		RobotomyRequestForm(RobotomyRequestForm const& copy);
 		RobotomyRequestForm(std::string target);
-		virtual ~RobotomyRequestForm(void);
+		~RobotomyRequestForm(void);
 
 		RobotomyRequestForm& operator=(RobotomyRequestForm const & src);
 

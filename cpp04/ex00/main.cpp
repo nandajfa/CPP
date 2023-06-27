@@ -32,8 +32,8 @@ int main()
 	std::cout << wrgC->getType() << " " << std::endl;
 	std::cout << std::endl;
 
-	i->makeSound();
 	j->makeSound();
+	i->makeSound();
 	meta->makeSound();
 	wrg->makeSound();
 	wrgC->makeSound();
@@ -44,7 +44,7 @@ int main()
 	delete i;
 	delete wrg;
 	delete wrgC;
-
+	
 	std::cout << std::endl;
 
 	return (0);

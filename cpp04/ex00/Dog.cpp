@@ -17,10 +17,12 @@ Dog::Dog(void) : Animal() {
 	std::cout << BLU << "Default constructor Dog called." << RESET << std::endl;
 	return;
 }
+
 Dog::Dog(Dog const& copy) : Animal() {
 	std::cout << BLU << "Copy constructor Dog called." << RESET << std::endl;
 	*this = copy;
 }
+
 Dog::~Dog(void){
 	std::cout << BLU << "Destructor Dog called." << RESET << std::endl;
 	return;
@@ -28,7 +30,7 @@ Dog::~Dog(void){
 
 Dog& Dog::operator=(Dog const & src){
 	if (this != &src)
-		this->_type = src.getType();
+		this->setType(src.getType());
 	std::cout << BLU << "Copy assignment Dog operator called." << RESET << std::endl;
 	return (*this);
 }

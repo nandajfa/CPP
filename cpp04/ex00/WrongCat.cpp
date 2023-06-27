@@ -34,5 +34,5 @@ WrongCat& WrongCat::operator=(WrongCat const & src){
 }
 
 void	WrongCat::makeSound(void) const{
-	std::cout << CYN << "The " << this->_type << " miaaWs" << RESET << std::endl;
+	std::cout << CYN << "The " << this->_type << " miaaWs." << RESET << std::endl;
 }

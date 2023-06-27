@@ -6,14 +6,14 @@
 /*   By: jefernan <jefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 02:45:55 by jefernan          #+#    #+#             */
-/*   Updated: 2023/06/07 02:58:51 by jefernan         ###   ########.fr       */
+/*   Updated: 2023/06/20 15:10:58 by jefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
 ShrubberyCreationForm::ShrubberyCreationForm() :
-	AForm("Shrubbery Creation Form", 145, 137), _target("Home") {
+	AForm("Shrubbery Creation Form", 145, 137), _target("None") {
 	std::cout << GRN << "Default constructor ShrubberyCreationForm called." << RESET << std::endl;
 }
 

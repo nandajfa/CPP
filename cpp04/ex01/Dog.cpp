@@ -21,23 +21,28 @@ Dog::Dog(void) : Animal() {
 
 Dog::Dog(Dog const& copy) : Animal() {
 	std::cout << BLU << "Copy constructor Dog called." << RESET << std::endl;
+	this->setType(copy._type);
 	this->_brain = new Brain();
 	*this = copy;
 }
 
 Dog::~Dog(void){
 	std::cout << BLU << "Destructor Dog called." << RESET << std::endl;
-	delete this->_brain;
+	delete (this->_brain);
 	return;
 }
 
 Dog& Dog::operator=(Dog const & src){
 	if (this != &src){
-		this->_type = src.getType();
-		this->_brain = src._brain;
+		this->setType(src.getType());
+		*(this->_brain) = *(src.getBrain());
 	}
 	std::cout << BLU << "Copy assignment Dog operator called." << RESET << std::endl;
 	return (*this);
+}
+
+Brain*	Dog::getBrain(void) const{
+	return (this->_brain);
 }
 
 void	Dog::makeSound(void) const{

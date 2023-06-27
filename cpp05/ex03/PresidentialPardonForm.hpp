@@ -6,7 +6,7 @@
 /*   By: jefernan <jefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 01:03:31 by jefernan          #+#    #+#             */
-/*   Updated: 2023/06/07 20:16:08 by jefernan         ###   ########.fr       */
+/*   Updated: 2023/06/20 16:11:43 by jefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class PresidentialPardonForm : public AForm {
 		PresidentialPardonForm(void);
 		PresidentialPardonForm(PresidentialPardonForm const& copy);
 		PresidentialPardonForm(std::string target);
-		virtual ~PresidentialPardonForm(void);
+		~PresidentialPardonForm(void);
 
 		PresidentialPardonForm& operator=(PresidentialPardonForm const & src);
 

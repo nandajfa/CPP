@@ -21,30 +21,30 @@ Cat::Cat(void) : AAnimal() {
 
 Cat::Cat(Cat const& copy) : AAnimal() {
 	std::cout << YEL << "Copy constructor Cat called." << RESET << std::endl;
+	this->setType(copy._type);
 	this->_brain = new Brain();
 	*this = copy;
 }
 
 Cat::~Cat(void){
 	std::cout << YEL << "Destructor Cat called." << RESET << std::endl;
-	delete this->_brain;
+	delete (this->_brain);
 	return;
 }
 
 Cat& Cat::operator=(Cat const & src){
 	if (this != &src){
-		this->_type = src.getType();
-		this->_brain = src._brain;
+		this->setType(src.getType());
+		*(this->_brain) = *(src.getBrain());
 	}
 	std::cout << YEL << "Copy assignment Cat operator called." << RESET << std::endl;
 	return (*this);
 }
 
-/**
- * @brief Make a sound
- * @details This function prints a message indicating that the cat meows.
- */
-void	Cat::makeSound(void) const{
-	std::cout << YEL << "The " << this->_type << " miaawws"<< RESET << std::endl;
+Brain*	Cat::getBrain(void) const{
+	return (this->_brain);
 }
 
+void	Cat::makeSound(void) const{
+	std::cout << YEL << "The " << this->_type << " miaawws."<< RESET << std::endl;
+}

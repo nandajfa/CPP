@@ -19,13 +19,14 @@
 class Cat : public Animal {
 	public:
 		Cat(void);
-		virtual ~Cat(void);
+		~Cat(void);
 		Cat(Cat const& copy);
 		Cat& operator=(Cat const& src);
 
-		void		makeSound(void) const;
+		void	makeSound(void) const;
+		Brain*	getBrain(void) const;
 	private:
-		Brain*	_brain;
+		Brain* _brain;
 };
 
 #endif

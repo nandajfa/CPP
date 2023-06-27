@@ -6,7 +6,7 @@
 /*   By: jefernan <jefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/03 02:23:38 by jefernan          #+#    #+#             */
-/*   Updated: 2023/06/07 22:18:14 by jefernan         ###   ########.fr       */
+/*   Updated: 2023/06/20 16:16:28 by jefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ int	Form::getGradeToEx(void) const {
 void	Form::beSigned(const Bureaucrat& br){
 	try {
 		if (br.getGrade() > this->getGradeToSign())
-			throw AForm::GradeTooLowException();
+			throw Form::GradeTooLowException();
 	}
 	catch (std::exception& e) {
 		std::cout << e.what() << std::endl;

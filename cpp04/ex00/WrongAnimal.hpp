@@ -23,8 +23,9 @@
 class WrongAnimal {
 	public:
 		WrongAnimal(void);
+		WrongAnimal(std::string const& type);
 		WrongAnimal(WrongAnimal const& copy);
-		~WrongAnimal(void);
+		virtual ~WrongAnimal(void);
 
 		WrongAnimal& operator=(WrongAnimal const& src);
 

@@ -18,7 +18,7 @@
 class Dog : public Animal {
 	public:
 		Dog(void);
-		virtual ~Dog(void);
+		~Dog(void);
 		Dog(Dog const& copy);
 		Dog& operator=(Dog const& src);
 
@@ -26,3 +26,4 @@ class Dog : public Animal {
 };
 
 #endif
+

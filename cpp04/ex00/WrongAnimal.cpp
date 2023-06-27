@@ -16,10 +16,16 @@ WrongAnimal::WrongAnimal(void) : _type("WrongAnimal") {
 	std::cout << MAG << "Default constructor WrongAnimal called." << RESET << std::endl;
 	return;
 }
+
+WrongAnimal::WrongAnimal(std::string const& type): _type(type) {
+	std::cout << MAG << "Type constructor WrongAnimal called." << RESET << std::endl;
+}
+
 WrongAnimal::WrongAnimal(WrongAnimal const& copy) {
 	std::cout << MAG << "Copy constructor WrongAnimal called." << RESET << std::endl;
 	*this = copy;
 }
+
 WrongAnimal::~WrongAnimal(void){
 	std::cout << MAG << "Destructor WrongAnimal called." << RESET << std::endl;
 	return;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jefernan <jefernan@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: jefernan <jefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 00:33:58 by jefernan          #+#    #+#             */
-/*   Updated: 2023/06/01 15:23:31 by jefernan         ###   ########.fr       */
+/*   Updated: 2023/06/19 20:59:16 by jefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Animal::~Animal(void){
 
 Animal& Animal::operator=(Animal const & src){
 	if (this != &src)
-		this->_type = src.getType();
+		this->setType(src.getType());
 	std::cout << GRN << "Copy assignment Animal operator called." << RESET << std::endl;
 	return (*this);
 }
