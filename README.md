@@ -54,7 +54,7 @@ What Object Oriented Programming (OOP) is
 | [CPP 06](https://github.com/nandajfa/CPP/tree/main/cpp06) |    ✅     | This module is designed to help you understand the different casts in CPP.                                                                                     |
 | [CPP 07](https://github.com/nandajfa/CPP/tree/main/cpp07) |    ✅     | This module is designed to help you understand Templates in CPP.                                                                                               |
 | [CPP 08](https://github.com/nandajfa/CPP/tree/main/cpp08) |    ✅     | This module is designed to help you understand templated containers, iterators and algorithms in CPP.                                                          |
-| [CPP 09](https://github.com/nandajfa/CPP/tree/main/cpp09) |    ❌     | This module is designed to help you understand the containers in CPP.                                                                                          |
+| [CPP 09](https://github.com/nandajfa/CPP/tree/main/cpp09) |    ✅     | This module is designed to help you understand the containers in CPP.                                                                                          |
 
 ## References
 
