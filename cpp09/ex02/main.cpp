@@ -6,7 +6,7 @@
 /*   By: jefernan <jefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 15:47:21 by jefernan          #+#    #+#             */
-/*   Updated: 2023/07/10 15:56:39 by jefernan         ###   ########.fr       */
+/*   Updated: 2023/07/12 20:47:20 by jefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,4 @@ int	main(int argc, char *argv[])
 	catch (std::exception const &e) {
 		std::cerr << e.what() << std::endl;
 	}
-
 }
